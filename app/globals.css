@@ -1,5 +1,54 @@
 @import "tailwindcss";
 
+
+
+html::-webkit-scrollbar {
+  width: 0px;
+}
+
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+  font-weight: 400;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+html::-webkit-scrollbar {
+  width: 0px;
+}
+
+.overflow-y-scroll::-webkit-scrollbar {
+  width: 0px;
+  scrollbar-width: none;
+  display: none;
+  overflow: -moz-scrollbars-none;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+div,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input:focus,
+textarea:focus {
+  outline: 0;
+  outline: none !important;
+}
+
 @theme {
   /* ── Colors ─────────────────────────────── */
   --color-brand: #ef8e47;

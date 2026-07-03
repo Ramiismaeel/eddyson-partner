@@ -1,6 +1,16 @@
-export default function Home() {
+import { SliceZone } from "@prismicio/react";
+import { createClient } from "@/prismicio";
+import { components } from "@/slices";
+import Footer from "@/app/components/Footer";
+
+export default async function Page() {
+  const client = createClient();
+  const page = await client.getSingle("partner_page");
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-    </div>
+    <main>
+      <SliceZone slices={page.data.slices} components={components} />
+      <Footer />
+    </main>
   );
 }
