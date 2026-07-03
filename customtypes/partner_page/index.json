@@ -1,0 +1,52 @@
+{
+  "format": "page",
+  "id": "partner_page",
+  "label": "partner_page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "partner_program": {
+              "type": "SharedSlice"
+            },
+            "hero": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "Eddyson partner"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "Your partner in the EDI jungle"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "label": "Meta Image",
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}

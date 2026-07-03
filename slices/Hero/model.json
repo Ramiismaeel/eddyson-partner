@@ -1,0 +1,123 @@
+{
+  "id": "hero",
+  "type": "SharedSlice",
+  "name": "Hero",
+  "description": "Hero",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "topline": {
+          "type": "Text",
+          "config": {
+            "label": "Topline",
+            "placeholder": "Fast | Scalable | Successful"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "copy": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Copy",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "cta_primary": {
+          "type": "Link",
+          "config": {
+            "label": "cta_primary",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "cta_secondary": {
+          "type": "Link",
+          "config": {
+            "label": "cta_secondary",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "widget_menu": {
+          "type": "Image",
+          "config": {
+            "label": "widget_menu",
+            "constraint": {
+              "width": 313,
+              "height": 587
+            },
+            "thumbnails": []
+          }
+        },
+        "widget_inventory": {
+          "type": "Image",
+          "config": {
+            "label": "widget_inventory",
+            "constraint": {
+              "width": 240,
+              "height": 178
+            },
+            "thumbnails": []
+          }
+        },
+        "widget_video": {
+          "type": "Image",
+          "config": {
+            "label": "widget_video",
+            "constraint": {
+              "width": 412,
+              "height": 232
+            },
+            "thumbnails": []
+          }
+        },
+        "logos": {
+          "type": "Group",
+          "config": {
+            "label": "logos",
+            "repeat": true,
+            "fields": {
+              "logo": {
+                "type": "Image",
+                "config": {
+                  "label": "Logo",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "name": {
+                "type": "Text",
+                "config": {
+                  "label": "Name",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

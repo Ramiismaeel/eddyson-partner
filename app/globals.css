@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Colors ─────────────────────────────── */
+  --color-brand: #ef8e47;
+  /* hero orange band, orange CTAs   */
+  --color-brand-dark: #d97a35;
+  /* hover state                     */
+  --color-ink: #2c2c2c;
+  /* primary text on light           */
+  --color-ink-soft: #545454;
+  /* secondary text                  */
+  --color-surface: #fdfdfd;
+  /* page background                 */
+  --color-surface-muted: #f5f5f4;
+  /* subtle pixel-grid section bg    */
+  --color-charcoal: #212121;
+  /* dark "Partner Program" section  */
+  --color-charcoal-deep: #161616;
+  /* footer                          */
+  --color-card-dark: #1b1b1b;
+  /* dark benefit cards              */
+  --color-accent-pink: #f2a9a0;
+  /* decorative ribbon / card bg     */
+  --color-accent-teal: #6fd5c6;
+  /* decorative ribbon               */
+  --color-accent-red: #e2554d;
+  /* decorative ribbon               */
+
+  /* ── Typography ─────────────────────────── */
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-quando), Georgia, serif;
+
+  /* ── Radius ──────────────────────────────── */
+  --radius-card: 1.25rem;
+  /* dark section + benefit cards */
+  --radius-panel: 0.75rem;
+  /* hero orange box, form panel  */
+  --radius-btn: 0.5rem;
+  /* buttons                      */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
