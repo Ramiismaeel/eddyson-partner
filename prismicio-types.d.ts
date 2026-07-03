@@ -66,7 +66,13 @@ type ContentRelationshipFieldWithData<
   >;
 }[Exclude<TCustomType[number], string>["id"]];
 
-type PartnerPageDocumentDataSlicesSlice = PartnerProgramSlice | HeroSlice;
+type PartnerPageDocumentDataSlicesSlice =
+  | QuoteBannerSlice
+  | EdiExpertiseSlice
+  | ContactSectionSlice
+  | BenefitsGridSlice
+  | PartnerProgramSlice
+  | HeroSlice;
 
 /**
  * Content for partner_page documents

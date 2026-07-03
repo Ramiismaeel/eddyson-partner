@@ -11,6 +11,18 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "quote_banner": {
+              "type": "SharedSlice"
+            },
+            "edi_expertise": {
+              "type": "SharedSlice"
+            },
+            "contact_section": {
+              "type": "SharedSlice"
+            },
+            "benefits_grid": {
+              "type": "SharedSlice"
+            },
             "partner_program": {
               "type": "SharedSlice"
             },
