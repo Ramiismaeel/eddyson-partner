@@ -1,4 +1,13 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# eddyson-partner
+
+![Next](https://img.shields.io/badge/Next-16.x-00DC82?logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-06B6D4?logo=tailwindcss&logoColor=white)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6b6f0ac9-ce21-45d4-8873-6fe5adcff452/deploy-status)](https://app.netlify.com/sites/eddyson-partner/deploys)
+
+## Online preview
+
+[eddyson-partner](https://eddyson-partner.netlify.app)
 
 ## Getting Started
 

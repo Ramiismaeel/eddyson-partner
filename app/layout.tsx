@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
-import { DM_Sans, Quando } from "next/font/google";
+import { DM_Sans, Quando, DM_Mono } from "next/font/google";
 import { PrismicPreview } from "@prismicio/next";
 import { repositoryName } from "@/prismicio";
 import "./globals.css";
+
+const dmMono = DM_Mono({
+  weight: ["300", "400", "500"],
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+});
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -27,7 +34,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${quando.variable}`}>
+    <html lang="en" className={`${dmSans.variable} ${quando.variable} ${dmMono.variable}`}>
       <body className="w-full overflow-x-hidden bg-surface font-sans text-ink antialiased">
         {children}
         <PrismicPreview repositoryName={repositoryName} />

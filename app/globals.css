@@ -95,3 +95,25 @@ textarea:focus {
     --foreground: #ededed;
   }
 }
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}

@@ -8,7 +8,7 @@ export default function Footer() {
                 {/* ── Left column: logo + address + badges ── */}
                 <div>
                     <Image
-                        src="/eddyson_logo.svg"
+                        src="/images/eddyson_logo.svg"
                         alt="eddyson"
                         width={140}
                         height={36}
@@ -25,28 +25,28 @@ export default function Footer() {
 
                     <div className="flex items-center gap-[11.5px] mt-[197px] max-md:mt-10">
                         <Image
-                            src="/b041c13a-0434-4f8d-9cf8-939c2de95496_Crefozert.avif"
+                            src="/images/b041c13a-0434-4f8d-9cf8-939c2de95496_Crefozert.avif"
                             alt="Crefozert certification"
                             width={80}
                             height={80}
                             className="w-[80px] h-[80px] rounded-lg object-cover"
                         />
                         <Image
-                            src="/d5a175ad-33b0-44c6-8f41-aadcff9162c3_Software+hosted+in+Germany.avif"
+                            src="/images/d5a175ad-33b0-44c6-8f41-aadcff9162c3_Software+hosted+in+Germany.avif"
                             alt="Software hosted in Germany"
                             width={80}
                             height={80}
                             className="w-[80px] h-[80px] rounded-lg object-cover"
                         />
                         <Image
-                            src="/f16fb3a0-13ac-4b27-9c87-90dd52fd55c0_GS1.avif"
+                            src="/images/f16fb3a0-13ac-4b27-9c87-90dd52fd55c0_GS1.avif"
                             alt="GS1 certified"
                             width={80}
                             height={80}
                             className="w-[80px] h-[80px] rounded-lg object-cover"
                         />
                         <Image
-                            src="/de0a914f-8608-4feb-9d08-a035c56c7087_Software+Made+in+Germany.avif"
+                            src="/images/de0a914f-8608-4feb-9d08-a035c56c7087_Software+Made+in+Germany.avif"
                             alt="Software Made in Germany"
                             width={80}
                             height={80}
@@ -127,7 +127,7 @@ export default function Footer() {
                                 aria-label="Xing"
                                 className="flex items-center justify-center w-7 h-7 transition-opacity duration-200 hover:opacity-70"
                             >
-                                <Image src="/xing.svg" alt="Xing" width={24} height={24} className="w-auto h-auto" />
+                                <Image src="/images/xing.svg" alt="Xing" width={24} height={24} className="w-auto h-auto" />
                             </a>
                             <a
                                 href="https://www.linkedin.com/company/eddyson"
@@ -137,7 +137,7 @@ export default function Footer() {
                                 className="flex items-center justify-center w-7 h-7 transition-opacity duration-200 hover:opacity-70"
                             >
                                 <Image
-                                    src="/linkedin.svg"
+                                    src="/images/linkedin.svg"
                                     alt="LinkedIn"
                                     width={24}
                                     height={24}
