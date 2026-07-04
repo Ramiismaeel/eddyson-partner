@@ -97,17 +97,17 @@ const Hero: FC<HeroProps> = ({ slice }) => {
           >
             {/* All-requests menu */}
             <div className="absolute left-[328px] z-[1] top-0 w-[313px] overflow-hidden rounded-xl bg-white ">
-              <PrismicNextImage field={slice.primary.widget_menu} alt={(slice.primary.widget_menu.alt || "logo") as never} className="h-auto w-full" />
+              <PrismicNextImage field={slice.primary.widget_menu} fallbackAlt="" className="h-auto w-full" />
             </div>
 
             {/* Inventory card — glassy charcoal, z-2, sits over the orange */}
             <div className="absolute left-[130px] top-[83px] z-[2] w-[240px] overflow-hidden rounded-xl ">
-              <PrismicNextImage field={slice.primary.widget_inventory} alt={(slice.primary.widget_inventory.alt || "logo") as never} className="h-auto w-full" />
+              <PrismicNextImage field={slice.primary.widget_inventory} fallbackAlt="" className="h-auto w-full" />
             </div>
 
             {/* Video player */}
             <div className="absolute left-0 top-[294px] z-[0] w-[412px] overflow-hidden rounded-xl ">
-              <PrismicNextImage field={slice.primary.widget_video} alt={(slice.primary.widget_video.alt || "logo") as never} className="h-auto w-full" />
+              <PrismicNextImage field={slice.primary.widget_video} fallbackAlt="" className="h-auto w-full" />
             </div>
           </div>
         </div>
@@ -128,7 +128,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
               >
                 <PrismicNextImage
                   field={item.logo}
-                  alt={(item.logo.alt || "logo") as never}
+                  fallbackAlt={(item.logo.alt || "logo") as never}
                   className="h-full w-auto object-contain"
                 />
 
