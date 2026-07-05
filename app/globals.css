@@ -117,3 +117,34 @@ textarea:focus {
     scroll-behavior: auto;
   }
 }
+
+.phone-field {
+  --react-international-phone-height: 42px;
+  --react-international-phone-font-size: 14px;
+  --react-international-phone-text-color: #212121;
+  --react-international-phone-border-color: transparent;
+
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  background: #fff;
+  overflow: hidden;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.phone-field:focus-within {
+  border-color: var(--color-brand);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-brand) 20%, transparent);
+}
+
+.phone-field .react-international-phone-input {
+  width: 100%;
+  border: none;
+  background: transparent;
+}
+
+.phone-field .react-international-phone-country-selector-button {
+  border: none;
+  background: transparent;
+  padding-inline: 10px 4px;
+}
