@@ -1,31 +1,33 @@
-import { FC } from "react";
-import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import { FC } from "react"
+import { Content } from "@prismicio/client"
+import { PrismicRichText, SliceComponentProps } from "@prismicio/react"
 
-/**
- * Props for `EdiExpertise`.
- */
-export type EdiExpertiseProps = SliceComponentProps<Content.EdiExpertiseSlice>;
+export type EdiExpertiseProps = SliceComponentProps<Content.EdiExpertiseSlice>
 
-/**
- * Component for "EdiExpertise" Slices.
- */
 const EdiExpertise: FC<EdiExpertiseProps> = ({ slice }) => {
   return (
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className="w-full mt-28"
     >
-      Placeholder component for edi_expertise (variation: {slice.variation})
-      slices.
-      <br />
-      <strong>You can edit this slice directly in your code editor.</strong>
-      {/**
-       * 💡 Use your own AI agent with the Prismic CLI
-       * 📚 Docs: https://prismic.io/docs/ai#create-slices
-       */}
+      <div className="w-full mx-auto max-w-[990px] px-4 sm:px-12 lg:px-0 text-center text-left">
+        <PrismicRichText
+          field={slice.primary.headline}
+          components={{
+            paragraph: ({ children }) => (
+              <h2 className="mb-4 text-2xl font-bold md:text-4xl text-strong">
+                {children}
+              </h2>
+            ),
+          }}
+        />
+        <div className="text-xl md:text-4xl font-light leading-[1.4]  text-muted">
+          <PrismicRichText field={slice.primary.copy} />
+        </div>
+      </div>
     </section>
-  );
-};
+  )
+}
 
-export default EdiExpertise;
+export default EdiExpertise

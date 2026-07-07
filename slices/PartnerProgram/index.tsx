@@ -33,7 +33,7 @@ const PartnerProgram: FC<PartnerProgramProps> = ({ slice }) => {
                 ),
               }}
             />
-            <div className=" text-2xl font-light tracking-light leading-[1.4] text-inverse-muted">
+            <div className="text-lg md:text-2xl font-light tracking-light leading-[1.4] text-inverse-muted">
               <PrismicRichText field={slice.primary.copy} />
             </div>
           </div>
