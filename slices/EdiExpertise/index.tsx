@@ -9,9 +9,9 @@ const EdiExpertise: FC<EdiExpertiseProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="w-full mt-28"
+      className="w-full mt-8 md:mt-28"
     >
-      <div className="w-full mx-auto max-w-[990px] px-4 sm:px-12 lg:px-0 text-center text-left">
+      <div className="w-full mx-auto max-w-[990px] px-6 sm:px-12 lg:px-0 text-center text-left">
         <PrismicRichText
           field={slice.primary.headline}
           components={{

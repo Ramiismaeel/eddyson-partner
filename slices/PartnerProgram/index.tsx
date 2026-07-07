@@ -13,7 +13,7 @@ const PartnerProgram: FC<PartnerProgramProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="mt-25 w-full mx-auto w-full px-6 md:px-30"
+      className="mt-8 md:mt-25 w-full mx-auto w-full px-6 md:px-30"
     >
       <div className="bg-linear-to-r from-black to-secondary rounded-3xl  pt-[70px]">
         <div className="w-full">

@@ -64,6 +64,7 @@ textarea:focus {
   --color-inverse-soft: #F8F8F8;
   --color-inverse-muted: #ECECEC;
   --color-badge: #282828;
+  --color-divider: #949494;
 
   /* ── Typography ─────────────────────────── */
   --font-sans: var(--font-dm-sans);
