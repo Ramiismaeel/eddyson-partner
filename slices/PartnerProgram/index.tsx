@@ -37,7 +37,7 @@ const PartnerProgram: FC<PartnerProgramProps> = ({ slice }) => {
               <PrismicRichText field={slice.primary.copy} />
             </div>
           </div>
-          <div className="lg:bg-[url(/images/partner_background.png)] w-full bg-auto bg-no-repeat pt-[70px] pb-14">
+          <div className="lg:bg-[url(/images/partner_background.png)] w-full  bg-cover bg-no-repeat pt-[70px] pb-14">
             <div className="max-w-[739px] grid gap-5 lg:grid-cols-3 mx-auto px-4">
               {cards.map((card, i) => (
                 <article
