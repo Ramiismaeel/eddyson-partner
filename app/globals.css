@@ -63,18 +63,14 @@ textarea:focus {
   /* Text on dark backgrounds */
   --color-inverse-soft: #F8F8F8;
   --color-inverse-muted: #ECECEC;
+  --color-badge: #282828;
 
   /* ── Typography ─────────────────────────── */
-  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-dm-sans);
   --font-serif: var(--font-quando), Georgia, serif;
 
-  /* ── Radius ──────────────────────────────── */
-  --radius-card: 1.25rem;
-  /* dark section + benefit cards */
-  --radius-panel: 0.75rem;
-  /* hero orange box, form panel  */
-  --radius-btn: 0.5rem;
-  /* buttons                      */
+  /* ── Shadow ──────────────────────────────── */
+  --shadow-card: 0 0 1px 0 rgb(0 0 0 / 0.16), 0 4px 36px 0 rgb(0 0 0 / 0.10);
 
   /* Letter spacing */
   --tracking-light: 0.02em;
