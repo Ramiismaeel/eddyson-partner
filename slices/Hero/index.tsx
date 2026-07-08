@@ -16,7 +16,7 @@ function Hero({ slice }: HeroProps) {
       data-slice-variation={slice.variation}
       className="relative"
     >
-      <div className="w-full mt-8 md:mt-[53px]">
+      <div className="w-full mt-8 md:mt-[53px] max-w-[1600px] mx-auto">
         <div className="max-w-[566px] md:ml-31 px-6 md:px-0">
           <PrismicRichText
             field={slice.primary.title}
@@ -30,7 +30,7 @@ function Hero({ slice }: HeroProps) {
           />
         </div>
       </div>
-      <div className="w-full mt-[62px] px-6 relative">
+      <div className="w-full mt-[62px] px-6 relative max-w-[1600px] mx-auto">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute sm:-right-36 md:-right-30 lg:-right-14 xl:right-[38px] xl:bottom-unset -bottom-12 md:-bottom-14 xl:top-[-122px] hidden h-[587px] w-[650px] md:block
@@ -101,7 +101,7 @@ function Hero({ slice }: HeroProps) {
       {logos.length > 0 && (
         <div
           aria-label="Trusted by leading companies"
-          className="group overflow-hidden rounded-b-3xl bg-surface-muted py-6 mx-6 bg-inverse-muted "
+          className="group overflow-hidden rounded-b-3xl bg-surface-muted py-6 mx-6  bg-inverse-muted max-w-[1552px] 2xl:mx-auto"
         >
           <div className="animate-marquee flex w-max items-center gap-12 [animation:marquee_30s_linear_infinite] group-hover:[animation-play-state:paused]">
             {[...logos, ...logos].map((item, i) => (

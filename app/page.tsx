@@ -10,7 +10,7 @@ export default async function Page() {
   const page = await client.getSingle("partner_page")
 
   return (
-    <main className="relative max-w-[1600px] mx-auto">
+    <main className="relative mx-auto">
       <PageDecor />
       <Header />
       <SliceZone slices={page.data.slices} components={components} />

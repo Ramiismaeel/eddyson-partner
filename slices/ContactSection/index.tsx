@@ -14,7 +14,7 @@ function ContactSection({ slice }: ContactSectionProps) {
       className="w-full relative md:mt-44 lg:pb-[175px] pb-16 pt-6"
     >
       <div className="absolute top-[40%] bottom-0 w-full h-full -z-1 bg-[url(/images/Bottom-bg.png)] bg-cover bg-no-repeat bg-bottom" />
-      <div className="w-full flex flex-col lg:flex-row items-center gap-[110px] px-6 lg:px-16 xl:px-[90px]">
+      <div className="w-full flex max-w-[1600px] mx-auto flex-col lg:flex-row items-center gap-[110px] px-6 lg:px-16 xl:px-[90px]">
         <div className="md:pt-8 max-w-153">
           <PrismicRichText
             field={slice.primary.headline}

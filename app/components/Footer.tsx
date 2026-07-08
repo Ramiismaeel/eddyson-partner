@@ -4,7 +4,7 @@ import Link from "next/link"
 export default function Footer() {
   return (
     <footer className="bg-primary text-white px-6 md:px-12 lg:px-[126px] py-8 md:py-12 lg:py-30">
-      <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr_1fr] lg:flex w-full">
+      <div className="grid grid-cols-1 md:grid-cols-[1.2fr_1fr_1fr] lg:flex w-full max-w-[1600px] mx-auto">
         <div className="w-full">
           <Image
             src="/images/eddyson_logo.svg"

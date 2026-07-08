@@ -14,7 +14,7 @@ const BenefitsGrid: FC<BenefitsGridProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className=""
     >
-      <div className="mx-auto grid gap-4 lg:gap-10 sm:grid-cols-2 lg:grid-cols-3 mt-8 md:mt-41 px-6 lg:px-16 xl:px-[90px]">
+      <div className="mx-auto max-w-[1600px] grid gap-4 lg:gap-10 sm:grid-cols-2 lg:grid-cols-3 mt-8 md:mt-41 px-6 lg:px-16 xl:px-[90px]">
         {cards.map((card, i) => (
           <article
             key={i}
