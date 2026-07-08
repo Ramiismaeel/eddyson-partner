@@ -48,6 +48,7 @@ const PartnerProgram: FC<PartnerProgramProps> = ({ slice }) => {
                     <PrismicNextImage
                       field={card.image}
                       fallbackAlt=""
+                      alt={(card.image.alt ?? `program-${i + 1}`) as never}
                       className="h-full w-full object-cover rounded"
                     />
                   </div>

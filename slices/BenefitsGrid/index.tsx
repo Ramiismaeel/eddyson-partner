@@ -24,6 +24,7 @@ const BenefitsGrid: FC<BenefitsGridProps> = ({ slice }) => {
               field={card.image}
               width={412}
               height={448}
+              alt={(card.image.alt ?? `grid-${i + 1}`) as never}
               className="absolute inset-0 h-full w-full object-cover "
             />
             {/* dark gradient so white text stays legible */}

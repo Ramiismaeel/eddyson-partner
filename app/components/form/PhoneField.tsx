@@ -100,7 +100,7 @@ export function PhoneField({
           >
             <Image
               src={flagUrl(country.iso2)}
-              alt=""
+              alt="flag"
               width={22}
               height={16}
               className="h-4 w-[22px] rounded-[2px] object-cover"
@@ -160,7 +160,7 @@ export function PhoneField({
                   >
                     <Image
                       src={flagUrl(c.iso2)}
-                      alt=""
+                      alt="flag"
                       width={22}
                       height={16}
                       loading="lazy"
