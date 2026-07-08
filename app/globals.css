@@ -73,6 +73,7 @@ textarea:focus {
   /* ── Shadow ──────────────────────────────── */
   --shadow-card: 0 0 1px 0 rgb(0 0 0 / 0.16), 0 4px 36px 0 rgb(0 0 0 / 0.10);
   --shadow-contact: 0 1px 8px 0 rgb(0 0 0 / 0.25);
+  --shadow-form: 0px 1px 4px rgba(0, 0, 0, 0.16), 0px 4px 24px rgba(0, 0, 0, 0.10);
 
   /* Letter spacing */
   --tracking-light: 0.02em;
