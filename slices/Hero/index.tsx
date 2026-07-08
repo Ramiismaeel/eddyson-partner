@@ -1,15 +1,14 @@
-import { FC } from "react"
 import { Content } from "@prismicio/client"
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react"
 import { PrismicNextImage, PrismicNextLink } from "@prismicio/next"
 
 export type HeroProps = SliceComponentProps<Content.HeroSlice>
 
-const Hero: FC<HeroProps> = ({ slice }) => {
+function Hero({ slice }: HeroProps) {
   const logos = slice.primary.logos ?? []
 
   const buttonClass =
-    "inline-flex items-center justify-center rounded-lg tracking-light border-2 border-primary px-3 md:px-6 py-2 md:py-[18px] font-sans text-base font-medium  transition"
+    "inline-flex items-center justify-center rounded-lg tracking-light border-2 border-primary px-3 md:px-6 py-2 md:py-[18px] font-sans text-base font-medium transition"
 
   return (
     <section
@@ -49,7 +48,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
           </div>
 
           {/* Inventory card — glassy charcoal, z-2, sits over the orange */}
-          <div className="absolute left-[130px] top-[83px] z-[2] w-[240px] overflow-hidden rounded-xl ">
+          <div className="absolute left-[130px] top-[83px] z-[2] w-[240px] overflow-hidden rounded-xl">
             <PrismicNextImage
               field={slice.primary.widget_inventory}
               alt={(slice.primary.widget_inventory.alt || "logo") as never}
@@ -58,7 +57,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
           </div>
 
           {/* Video player */}
-          <div className="absolute left-0 top-[294px] z-[0] w-[412px] overflow-hidden rounded-xl ">
+          <div className="absolute left-0 top-[294px] z-[0] w-[412px] overflow-hidden rounded-xl">
             <PrismicNextImage
               field={slice.primary.widget_video}
               alt={(slice.primary.widget_video.alt || "logo") as never}

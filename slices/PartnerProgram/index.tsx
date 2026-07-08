@@ -1,19 +1,17 @@
-import { FC } from "react"
 import { Content } from "@prismicio/client"
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react"
 import { PrismicNextImage } from "@prismicio/next"
 
 export type PartnerProgramProps =
   SliceComponentProps<Content.PartnerProgramSlice>
-
-const PartnerProgram: FC<PartnerProgramProps> = ({ slice }) => {
+function PartnerProgram({ slice }: PartnerProgramProps) {
   const cards = slice.primary.cards ?? []
 
   return (
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="mt-8 md:mt-25 w-full mx-auto w-full px-6 md:px-30"
+      className="mt-8 md:mt-25 mx-auto w-full px-6 md:px-30"
     >
       <div className="bg-linear-to-r from-black to-secondary rounded-3xl  pt-[70px]">
         <div className="w-full">
@@ -44,7 +42,7 @@ const PartnerProgram: FC<PartnerProgramProps> = ({ slice }) => {
                   key={i}
                   className="overflow-hidden rounded-lg bg-badge shadow-card"
                 >
-                  <div className="aspect-[4/3] overflow-hidden p-6 rounded ">
+                  <div className="aspect-[4/3] overflow-hidden p-6 rounded">
                     <PrismicNextImage
                       field={card.image}
                       fallbackAlt=""

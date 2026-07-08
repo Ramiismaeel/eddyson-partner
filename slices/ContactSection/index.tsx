@@ -1,4 +1,3 @@
-import { FC } from "react"
 import { Content } from "@prismicio/client"
 import { PrismicRichText, SliceComponentProps } from "@prismicio/react"
 import { PartnerForm } from "@/app/components/form/Partnerform"
@@ -6,7 +5,7 @@ import { PartnerForm } from "@/app/components/form/Partnerform"
 export type ContactSectionProps =
   SliceComponentProps<Content.ContactSectionSlice>
 
-const ContactSection: FC<ContactSectionProps> = ({ slice }) => {
+function ContactSection({ slice }: ContactSectionProps) {
   return (
     <section
       id="contact"

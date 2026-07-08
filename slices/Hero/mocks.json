@@ -44,7 +44,7 @@
 				"__TYPE__": "LinkContent",
 				"value": {
 					"__TYPE__": "ExternalLink",
-					"url": "http://twitter.com",
+					"url": "https://twitter.com",
 					"text": "gather"
 				}
 			},

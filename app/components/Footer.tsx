@@ -14,7 +14,7 @@ export default function Footer() {
             className="block mb-8 md:mb-15 w-auto h-auto"
           />
 
-          <address className="not-italic text-lg  md:text-2xl tracking-light leading-[1.4]">
+          <address className="not-italic text-lg md:text-2xl tracking-light leading-[1.4]">
             Groner Landstraße 23/25
             <br />
             37081 Goettingen
@@ -22,7 +22,7 @@ export default function Footer() {
             Germany
           </address>
 
-          <div className="flex items-center gap-9 mt-8 md:mt-[186px] max-md:mt-10">
+          <div className="flex items-center gap-9 mt-8 md:mt-[186px]">
             <Image
               src="/images/de0a914f-8608-4feb-9d08-a035c56c7087_Software+Made+in+Germany.avif"
               alt="Software Made in Germany"
@@ -94,7 +94,7 @@ export default function Footer() {
               href="/careers"
               className="block text-lg md:text-2xl no-underline leading-[1.4] tracking-light transition-colors duration-200 hover:text-brand"
             >
-              Carrers
+              Careers
             </Link>
             <Link
               href="/imprint"

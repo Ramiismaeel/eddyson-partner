@@ -23,11 +23,20 @@ const quando = Quando({
   variable: "--font-quando",
   display: "swap",
 })
+const title = "Your partner in the EDI jungle | eddyson"
+const description =
+  "Partner with eddyson for scalable EDI solutions in automotive, grocery, and retail."
+const image = "/og.png"
 
 export const metadata: Metadata = {
-  title: "Your partner in the EDI jungle | eddyson",
-  description:
-    "Partner with eddyson for scalable EDI solutions in automotive, grocery, and retail.",
+  title,
+  description,
+  openGraph: { title, description, images: [image], locale: "en_US" },
+  twitter: { card: "summary_large_image" },
+  robots: { index: true, follow: true },
+  icons: {
+    icon: "/favicon.svg",
+  },
 }
 
 export default function RootLayout({

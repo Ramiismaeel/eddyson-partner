@@ -2,10 +2,6 @@
 
 
 
-html::-webkit-scrollbar {
-  width: 0px;
-}
-
 html {
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -42,12 +38,6 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
-button,
-input:focus,
-textarea:focus {
-  outline: 0;
-  outline: none !important;
-}
 
 @theme {
   /* ── Colors ─────────────────────────────── */
