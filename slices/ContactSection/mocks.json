@@ -1,31 +1,31 @@
 [
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"headline": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Laboris irure minim consequat sunt nisi nostrud irure dolore duis. Magna dolor ad incididunt eiusmod sunt nostrud deserunt ad commodo excepteur anim ipsum reprehenderit ex id. Est ut fugiat sit sit sunt cillum elit do exercitation incididunt officia."
-						}
-					}
-				]
-			},
-			"copy": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Pariatur exercitation enim sit officia in et commodo irure sint occaecat."
-						}
-					}
-				]
-			}
-		},
-		"items": []
-	}
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "headline": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Laboris irure minim consequat sunt nisi nostrud irure dolore duis. Magna dolor ad incididunt eiusmod sunt nostrud deserunt ad commodo excepteur anim ipsum reprehenderit ex id. Est ut fugiat sit sit sunt cillum elit do exercitation incididunt officia."
+            }
+          }
+        ]
+      },
+      "copy": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Pariatur exercitation enim sit officia in et commodo irure sint occaecat."
+            }
+          }
+        ]
+      }
+    },
+    "items": []
+  }
 ]

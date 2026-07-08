@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "eslint",
     "lint:fix": "eslint . --fix",
-    "slicemachine": "start-slicemachine"
+    "slicemachine": "start-slicemachine",
+    "prettier": "prettier",
+    "prettier:check": "prettier --check .",
+    "prettier:write": "prettier --write ."
   },
   "dependencies": {
     "@prismicio/client": "^7.21.8",
@@ -25,6 +28,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
+    "prettier": "^3.9.4",
     "eslint-config-next": "16.2.10",
     "slice-machine-ui": "^2.21.3",
     "tailwindcss": "^4",

@@ -1,167 +1,167 @@
 [
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"topline": {
-				"__TYPE__": "FieldContent",
-				"value": "all",
-				"type": "Text"
-			},
-			"title": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Excepteur duis est mollit consequat ipsum irure eu quis fugiat."
-						}
-					}
-				]
-			},
-			"copy": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Adipisicing officia esse eu pariatur ipsum deserunt quis et esse."
-						}
-					}
-				]
-			},
-			"cta_primary": {
-				"key": "d3ac01ac-2314-4e80-95b6-be59ab96d163",
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://slicemachine.dev",
-					"text": "involved"
-				}
-			},
-			"cta_secondary": {
-				"key": "e2871f52-3603-44a3-9325-bc63889dcf58",
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://twitter.com",
-					"text": "gather"
-				}
-			},
-			"widget_menu": {
-				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
-					"width": 8640,
-					"height": 8640
-				},
-				"url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?rect=2016%2C0%2C4607%2C8640&w=313&h=587",
-				"width": 313,
-				"height": 587,
-				"edit": {
-					"zoom": 1,
-					"crop": {
-						"x": 2016,
-						"y": 0
-					},
-					"background": "transparent"
-				},
-				"alt": "anyway",
-				"credits": null,
-				"__TYPE__": "ImageContent",
-				"thumbnails": {}
-			},
-			"widget_inventory": {
-				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
-					"width": 3456,
-					"height": 3456
-				},
-				"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?rect=0%2C446%2C3456%2C2563&w=240&h=178",
-				"width": 240,
-				"height": 178,
-				"edit": {
-					"zoom": 1,
-					"crop": {
-						"x": 0,
-						"y": 446
-					},
-					"background": "transparent"
-				},
-				"alt": "announced",
-				"credits": null,
-				"__TYPE__": "ImageContent",
-				"thumbnails": {}
-			},
-			"widget_video": {
-				"origin": {
-					"id": "main",
-					"url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
-					"width": 3648,
-					"height": 4560
-				},
-				"url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?rect=0%2C1253%2C3648%2C2054&w=412&h=232",
-				"width": 412,
-				"height": 232,
-				"edit": {
-					"zoom": 1,
-					"crop": {
-						"x": 0,
-						"y": 1253
-					},
-					"background": "transparent"
-				},
-				"alt": "might",
-				"credits": null,
-				"__TYPE__": "ImageContent",
-				"thumbnails": {}
-			},
-			"logos": {
-				"__TYPE__": "GroupContentType",
-				"value": [
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"logo",
-								{
-									"origin": {
-										"id": "main",
-										"url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
-										"width": 4000,
-										"height": 6000
-									},
-									"url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
-									"width": 4000,
-									"height": 6000,
-									"edit": {
-										"zoom": 1,
-										"crop": {
-											"x": 0,
-											"y": 0
-										},
-										"background": "transparent"
-									},
-									"alt": "sky",
-									"credits": null,
-									"__TYPE__": "ImageContent",
-									"thumbnails": {}
-								}
-							],
-							[
-								"name",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "applied",
-									"type": "Text"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		"items": []
-	}
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "topline": {
+        "__TYPE__": "FieldContent",
+        "value": "all",
+        "type": "Text"
+      },
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Excepteur duis est mollit consequat ipsum irure eu quis fugiat."
+            }
+          }
+        ]
+      },
+      "copy": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Adipisicing officia esse eu pariatur ipsum deserunt quis et esse."
+            }
+          }
+        ]
+      },
+      "cta_primary": {
+        "key": "d3ac01ac-2314-4e80-95b6-be59ab96d163",
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "https://slicemachine.dev",
+          "text": "involved"
+        }
+      },
+      "cta_secondary": {
+        "key": "e2871f52-3603-44a3-9325-bc63889dcf58",
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "https://twitter.com",
+          "text": "gather"
+        }
+      },
+      "widget_menu": {
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
+          "width": 8640,
+          "height": 8640
+        },
+        "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?rect=2016%2C0%2C4607%2C8640&w=313&h=587",
+        "width": 313,
+        "height": 587,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 2016,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "alt": "anyway",
+        "credits": null,
+        "__TYPE__": "ImageContent",
+        "thumbnails": {}
+      },
+      "widget_inventory": {
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
+          "width": 3456,
+          "height": 3456
+        },
+        "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?rect=0%2C446%2C3456%2C2563&w=240&h=178",
+        "width": 240,
+        "height": 178,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 446
+          },
+          "background": "transparent"
+        },
+        "alt": "announced",
+        "credits": null,
+        "__TYPE__": "ImageContent",
+        "thumbnails": {}
+      },
+      "widget_video": {
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
+          "width": 3648,
+          "height": 4560
+        },
+        "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?rect=0%2C1253%2C3648%2C2054&w=412&h=232",
+        "width": 412,
+        "height": 232,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 1253
+          },
+          "background": "transparent"
+        },
+        "alt": "might",
+        "credits": null,
+        "__TYPE__": "ImageContent",
+        "thumbnails": {}
+      },
+      "logos": {
+        "__TYPE__": "GroupContentType",
+        "value": [
+          {
+            "__TYPE__": "GroupItemContent",
+            "value": [
+              [
+                "logo",
+                {
+                  "origin": {
+                    "id": "main",
+                    "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
+                    "width": 4000,
+                    "height": 6000
+                  },
+                  "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
+                  "width": 4000,
+                  "height": 6000,
+                  "edit": {
+                    "zoom": 1,
+                    "crop": {
+                      "x": 0,
+                      "y": 0
+                    },
+                    "background": "transparent"
+                  },
+                  "alt": "sky",
+                  "credits": null,
+                  "__TYPE__": "ImageContent",
+                  "thumbnails": {}
+                }
+              ],
+              [
+                "name",
+                {
+                  "__TYPE__": "FieldContent",
+                  "value": "applied",
+                  "type": "Text"
+                }
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "items": []
+  }
 ]

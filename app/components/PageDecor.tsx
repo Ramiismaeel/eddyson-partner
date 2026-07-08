@@ -1,6 +1,5 @@
-
 export default function PageDecor() {
-    const year = new Date().getFullYear();
+  const year = new Date().getFullYear()
   return (
     <>
       <div
@@ -22,5 +21,5 @@ export default function PageDecor() {
         eddyson&nbsp;|&nbsp;{year}
       </span>
     </>
-  );
+  )
 }

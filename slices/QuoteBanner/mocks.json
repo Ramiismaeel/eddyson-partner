@@ -1,20 +1,20 @@
 [
-	{
-		"__TYPE__": "SharedSliceContent",
-		"variation": "default",
-		"primary": {
-			"quote": {
-				"__TYPE__": "StructuredTextContent",
-				"value": [
-					{
-						"type": "paragraph",
-						"content": {
-							"text": "Minim sint pariatur sit Lorem do do qui id ut duis minim. Consectetur nulla excepteur aliquip do minim minim. Eiusmod mollit fugiat est eiusmod eu tempor ex veniam in ullamco."
-						}
-					}
-				]
-			}
-		},
-		"items": []
-	}
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "quote": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Minim sint pariatur sit Lorem do do qui id ut duis minim. Consectetur nulla excepteur aliquip do minim minim. Eiusmod mollit fugiat est eiusmod eu tempor ex veniam in ullamco."
+            }
+          }
+        ]
+      }
+    },
+    "items": []
+  }
 ]

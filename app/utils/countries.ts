@@ -1,9 +1,9 @@
 export interface Country {
-  name: string;
+  name: string
   /** ISO 3166-1 alpha-2, lowercase (used for the flagcdn image URL). */
-  iso2: string;
+  iso2: string
   /** Calling code without the leading "+". */
-  dialCode: string;
+  dialCode: string
 }
 
 /**
@@ -78,21 +78,21 @@ export const COUNTRIES: Country[] = [
   { name: "United Arab Emirates", iso2: "ae", dialCode: "971" },
   { name: "United Kingdom", iso2: "gb", dialCode: "44" },
   { name: "United States", iso2: "us", dialCode: "1" },
-];
+]
 
 export function findCountry(iso2: string): Country | undefined {
-  return COUNTRIES.find((c) => c.iso2 === iso2.toLowerCase());
+  return COUNTRIES.find((c) => c.iso2 === iso2.toLowerCase())
 }
 
 /** CDN flag image (works cross-platform, unlike emoji flags on Windows). */
 export function flagUrl(iso2: string): string {
-  return `https://flagcdn.com/${iso2.toLowerCase()}.svg`;
+  return `https://flagcdn.com/${iso2.toLowerCase()}.svg`
 }
 
 /** Combine a { iso2, number } value into an E.164-style string ("" when empty). */
 export function toE164(value: { iso2: string; number: string }): string {
-  const digits = value.number.replace(/\D/g, "");
-  if (!digits) return "";
-  const country = findCountry(value.iso2) ?? COUNTRIES[0];
-  return `+${country.dialCode}${digits}`;
+  const digits = value.number.replace(/\D/g, "")
+  if (!digits) return ""
+  const country = findCountry(value.iso2) ?? COUNTRIES[0]
+  return `+${country.dialCode}${digits}`
 }
