@@ -88,3 +88,11 @@ export function findCountry(iso2: string): Country | undefined {
 export function flagUrl(iso2: string): string {
   return `https://flagcdn.com/${iso2.toLowerCase()}.svg`;
 }
+
+/** Combine a { iso2, number } value into an E.164-style string ("" when empty). */
+export function toE164(value: { iso2: string; number: string }): string {
+  const digits = value.number.replace(/\D/g, "");
+  if (!digits) return "";
+  const country = findCountry(value.iso2) ?? COUNTRIES[0];
+  return `+${country.dialCode}${digits}`;
+}

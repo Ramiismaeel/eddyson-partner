@@ -1,6 +1,5 @@
 import type { ReactNode } from "react"
 import { cn } from "@/app/utils/cn"
-import { ACCENT } from "@/app/utils/fieldStyle"
 
 interface FieldShellProps {
   label: string

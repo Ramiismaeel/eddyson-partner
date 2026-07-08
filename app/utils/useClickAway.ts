@@ -1,29 +1,32 @@
 import { useEffect, useRef, type RefObject } from "react";
 
 /**
- * Calls `onAway` when the user clicks outside `ref` or presses Escape,
- * while `active` is true. Listeners are attached only when active.
+ * Calls `onAway` when the user clicks outside `ref` or presses Escape, while
+ * `active` is true. Uses the "latest ref" pattern so listeners are attached
+ * only when `active` toggles (not on every render) and no ref is written
+ * during render.
  */
 export function useClickAway(
   ref: RefObject<HTMLElement | null>,
   active: boolean,
   onAway: () => void,
 ): void {
-  const callback = useRef(onAway);
+  const savedOnAway = useRef(onAway);
+
   useEffect(() => {
-    callback.current = onAway;
-  });
+    savedOnAway.current = onAway;
+  }, [onAway]);
 
   useEffect(() => {
     if (!active) return;
 
     function onPointerDown(e: MouseEvent) {
       if (ref.current && !ref.current.contains(e.target as Node)) {
-        callback.current();
+        savedOnAway.current();
       }
     }
     function onKeyDown(e: KeyboardEvent) {
-      if (e.key === "Escape") callback.current();
+      if (e.key === "Escape") savedOnAway.current();
     }
 
     document.addEventListener("mousedown", onPointerDown);

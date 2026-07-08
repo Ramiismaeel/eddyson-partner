@@ -38,7 +38,7 @@ const INITIAL_VALUES: PartnerFormValues = {
   fullName: "",
   company: "",
   email: "",
-  phone: "",
+  phone: { iso2: "fr", number: "" },
   partnerTypes: [],
   industry: [],
   systemFocus: "",
@@ -60,10 +60,10 @@ function validate(values: PartnerFormValues): FormErrors {
   else if (!EMAIL_PATTERN.test(values.email))
     errors.email = "Enter a valid email address."
 
-  // Minimal length check on the digits (dial code + national number).
+  // Minimal length check on the national number digits.
   // For per-country validation, add `libphonenumber-js` and call
-  // isValidPhoneNumber() here.
-  if (values.phone.replace(/\D/g, "").length < 8) {
+  // isValidPhoneNumber(toE164(values.phone)) here.
+  if (values.phone.number.replace(/\D/g, "").length < 8) {
     errors.phone = "Enter a valid phone number."
   }
 

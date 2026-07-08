@@ -13,24 +13,23 @@ import {
 } from "@/app/utils/countries"
 import { ChevronDownIcon } from "./Icons"
 
+import type { PhoneValue } from "@/app/types/form"
+
 interface PhoneFieldProps {
   label: string
-  /** Full E.164-style value, e.g. "+33612345678" ("" when empty). */
-  value: string
-  onChange: (phone: string) => void
+  value: PhoneValue
+  onChange: (value: PhoneValue) => void
   required?: boolean
   error?: string
   id?: string
-  /** ISO 3166-1 alpha-2, lowercase. */
-  defaultCountry?: string
 }
 
 /**
  * Self-contained international phone input — no external library.
  *
- * Owns the selected country + national number internally and emits a single
- * combined string via `onChange` (so the form keeps `phone` as one string).
- * When the form clears `value`, the field resets itself.
+ * Fully controlled: the parent owns the { iso2, number } value, so there's no
+ * internal form state to sync (and therefore no state-syncing effect). `open`
+ * and `search` are purely local UI state for the dropdown.
  */
 export function PhoneField({
   label,
@@ -39,50 +38,35 @@ export function PhoneField({
   required,
   error,
   id = "phone",
-  defaultCountry = "fr",
 }: PhoneFieldProps) {
-  const [iso2, setIso2] = useState(defaultCountry)
-  const [nationalNumber, setNationalNumber] = useState("")
   const [open, setOpen] = useState(false)
   const [search, setSearch] = useState("")
 
   const wrapperRef = useRef<HTMLDivElement>(null)
   const searchRef = useRef<HTMLInputElement>(null)
 
-  useClickAway(wrapperRef, open, () => setOpen(false))
-
-  const country: Country = findCountry(iso2) ?? COUNTRIES[0]
-
-  // Reset when the form clears the value (e.g. after a successful submit).
-  useEffect(() => {
-    if (value === "") {
-      setNationalNumber("")
-      setIso2(defaultCountry)
-    }
-  }, [value, defaultCountry])
-
-  // Focus the search box when the dropdown opens; clear it when it closes.
-  useEffect(() => {
-    if (open) searchRef.current?.focus()
-    else setSearch("")
-  }, [open])
-
-  function emit(nextIso: string, nextNumber: string) {
-    const digits = nextNumber.replace(/\D/g, "")
-    const c = findCountry(nextIso) ?? COUNTRIES[0]
-    onChange(digits ? `+${c.dialCode}${digits}` : "")
+  const close = () => {
+    setOpen(false)
+    setSearch("")
   }
 
+  useClickAway(wrapperRef, open, close)
+
+  // DOM-only effect (allowed): move focus into the dropdown when it opens.
+  useEffect(() => {
+    if (open) searchRef.current?.focus()
+  }, [open])
+
+  const country: Country = findCountry(value.iso2) ?? COUNTRIES[0]
+
   function selectCountry(nextIso: string) {
-    setIso2(nextIso)
-    setOpen(false)
-    emit(nextIso, nationalNumber)
+    onChange({ iso2: nextIso, number: value.number })
+    close()
   }
 
   function handleNumberChange(e: ChangeEvent<HTMLInputElement>) {
-    const next = e.target.value.replace(/[^\d\s]/g, "")
-    setNationalNumber(next)
-    emit(iso2, next)
+    const number = e.target.value.replace(/[^\d\s]/g, "")
+    onChange({ iso2: value.iso2, number })
   }
 
   const query = search.trim().toLowerCase()
@@ -105,7 +89,10 @@ export function PhoneField({
         >
           <button
             type="button"
-            onClick={() => setOpen((prev) => !prev)}
+            onClick={() => {
+              setOpen((prev) => !prev)
+              setSearch("")
+            }}
             aria-haspopup="listbox"
             aria-expanded={open}
             aria-label={`Country code: ${country.name} (+${country.dialCode})`}
@@ -132,7 +119,7 @@ export function PhoneField({
             inputMode="tel"
             autoComplete="tel-national"
             aria-invalid={!!error}
-            value={nationalNumber}
+            value={value.number}
             onChange={handleNumberChange}
             placeholder="000 000 000"
             className="w-full border-0 bg-transparent py-3 pl-1 pr-4 text-[15px] text-neutral-900 outline-none placeholder:text-neutral-400"
@@ -158,13 +145,17 @@ export function PhoneField({
                 </li>
               )}
               {filtered.map((c) => (
-                <li key={c.iso2} role="option" aria-selected={c.iso2 === iso2}>
+                <li
+                  key={c.iso2}
+                  role="option"
+                  aria-selected={c.iso2 === value.iso2}
+                >
                   <button
                     type="button"
                     onClick={() => selectCountry(c.iso2)}
                     className={cn(
                       "flex w-full items-center gap-3 rounded-md px-3 py-2 text-left text-[14px] transition-colors hover:bg-neutral-50",
-                      c.iso2 === iso2 && "bg-neutral-50"
+                      c.iso2 === value.iso2 && "bg-neutral-50"
                     )}
                   >
                     <Image

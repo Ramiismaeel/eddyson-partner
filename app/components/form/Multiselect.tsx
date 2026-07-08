@@ -60,7 +60,6 @@ export function MultiSelect({
           onClick={() => setOpen((prev) => !prev)}
           aria-haspopup="listbox"
           aria-expanded={open}
-          aria-invalid={!!error}
           className={cn(
             "flex w-full items-center justify-between gap-2 rounded-lg border bg-white px-4 py-3 text-left text-[15px] outline-none transition-colors focus:border-neutral-400 focus:ring-2 focus:ring-neutral-900/5",
             fieldBorder(!!error)
