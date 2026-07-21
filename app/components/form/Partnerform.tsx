@@ -4,7 +4,7 @@ import { useState, type FormEvent } from "react"
 import { TextField } from "./Textfield"
 import { TextAreaField } from "./TextAreaField"
 import { PhoneField } from "./PhoneField"
-import { MultiSelect, type Option } from "./Multiselect"
+import { MultiSelect } from "./Multiselect"
 import { Checkbox } from "./Checkbox"
 import { Toast } from "./Toast"
 import type {
@@ -12,69 +12,12 @@ import type {
   FormErrors,
   ToastState,
 } from "@/app/types/form"
-
-/**
- * Placeholder options — the Figma didn't specify the list.
- * In the eddyson project these would most likely come from Prismic.
- */
-const PARTNER_TYPE_OPTIONS: Option[] = [
-  { label: "Reseller", value: "reseller" },
-  { label: "Referral", value: "referral" },
-  { label: "Technology", value: "technology" },
-  { label: "System Integrator", value: "system_integrator" },
-  { label: "OEM", value: "oem" },
-]
-
-const INDUSTRY_OPTIONS: Option[] = [
-  { label: "Manufacturing", value: "manufacturing" },
-  { label: "Retail & E-commerce", value: "retail" },
-  { label: "Financial Services", value: "finance" },
-  { label: "Healthcare", value: "healthcare" },
-  { label: "Logistics", value: "logistics" },
-  { label: "Public Sector", value: "public_sector" },
-]
-
-const INITIAL_VALUES: PartnerFormValues = {
-  fullName: "",
-  company: "",
-  email: "",
-  phone: { iso2: "fr", number: "" },
-  partnerTypes: [],
-  industry: [],
-  systemFocus: "",
-  comments: "",
-  privacyAccepted: false,
-}
-
-const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-
-/** Minimal, synchronous validation — no library, no async. */
-function validate(values: PartnerFormValues): FormErrors {
-  const errors: FormErrors = {}
-
-  if (!values.fullName.trim())
-    errors.fullName = "Enter your first and last name."
-  if (!values.company.trim()) errors.company = "Enter your company."
-
-  if (!values.email.trim()) errors.email = "Enter your business email."
-  else if (!EMAIL_PATTERN.test(values.email))
-    errors.email = "Enter a valid email address."
-
-  // Minimal length check on the national number digits.
-  // For per-country validation, add `libphonenumber-js` and call
-  // isValidPhoneNumber(toE164(values.phone)) here.
-  if (values.phone.number.replace(/\D/g, "").length < 8) {
-    errors.phone = "Enter a valid phone number."
-  }
-
-  if (values.partnerTypes.length === 0)
-    errors.partnerTypes = "Select at least one."
-  if (values.industry.length === 0) errors.industry = "Select at least one."
-  if (!values.privacyAccepted)
-    errors.privacyAccepted = "Please accept the privacy policy."
-
-  return errors
-}
+import {
+  PARTNER_TYPE_OPTIONS,
+  INDUSTRY_OPTIONS,
+  INITIAL_VALUES,
+  validate,
+} from "@/app/utils/validateForm"
 
 export function PartnerForm() {
   const [values, setValues] = useState<PartnerFormValues>(INITIAL_VALUES)
