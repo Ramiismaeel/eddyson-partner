@@ -1,0 +1,18 @@
+# Generated files
+prismicio-types.d.ts
+next-env.d.ts
+
+# Build & test output
+.next/
+out/
+build/
+coverage/
+test-results/
+playwright-report/
+blob-report/
+
+# Dependencies
+node_modules/
+
+# Lockfile
+package-lock.json
